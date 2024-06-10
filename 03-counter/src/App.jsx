@@ -8,15 +8,18 @@ function App() {
 
   // let counter = 12;
 
-  const addValue = () => { 
+  const addValue = () => {
     // counter = counter + 1;
-    setCounter(counter + 1);
+    if (counter < 20) {
+      setCounter(counter + 1);
+    }
   };
 
-  const removeValue =()=>{
-    console.log("clicked", counter);
-    setCounter(counter - 1)
-  }
+  const removeValue = () => {
+    if (counter > 0) {
+      setCounter(counter - 1);
+    }
+  };
   return (
     <>
       <h1>Chai aur react</h1>
