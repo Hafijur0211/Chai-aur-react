@@ -1,7 +1,8 @@
 function App() {
+  const username = "Hafijur";
   return (
     <>
-      <h1>Hello With Vite</h1>
+      <h1>Hello Mr {username}</h1>
     </>
   );
 }
