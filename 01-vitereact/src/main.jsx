@@ -10,14 +10,14 @@ function MyApp() {
   );
 }
 
-const ReactElement = {
-  type: "a",
-  props: {
-    href: "https://google.com",
-    target: "_blank",
-  },
-  children: "click me to visit google",
-};
+// const ReactElement = {
+//   type: "a",
+//   props: {
+//     href: "https://google.com",
+//     target: "_blank",
+//   },
+//   children: "click me to visit google",
+// };
 
 const anotherElement = (
   <a href="https://google.com" target="_blank">
@@ -25,4 +25,10 @@ const anotherElement = (
   </a>
 );
 
-ReactDOM.createRoot(document.getElementById("root")).render(anotherElement);
+const reactElement = React.createElement(
+  "a",
+  { href: "https://google.com", target: "_blank" },
+  "click me to visit google"
+);
+
+ReactDOM.createRoot(document.getElementById("root")).render(reactElement);
