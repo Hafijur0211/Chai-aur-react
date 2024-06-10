@@ -10,6 +10,8 @@ function MyApp() {
   );
 }
 
+// Case -1
+
 // const ReactElement = {
 //   type: "a",
 //   props: {
@@ -19,11 +21,16 @@ function MyApp() {
 //   children: "click me to visit google",
 // };
 
+// Case -2
+
 const anotherElement = (
   <a href="https://google.com" target="_blank">
     Visit Google
   </a>
 );
+
+
+// Case -3
 
 const reactElement = React.createElement(
   "a",
