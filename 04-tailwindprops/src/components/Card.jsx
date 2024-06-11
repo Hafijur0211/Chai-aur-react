@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Card = (props) => {
-  console.log("props", props)
+  console.log(props.username);
   return (
     <div>
       <div className="relative h-[400px] w-[300px] rounded-md">
@@ -23,7 +23,7 @@ const Card = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
