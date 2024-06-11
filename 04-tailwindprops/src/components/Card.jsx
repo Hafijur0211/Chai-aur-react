@@ -1,7 +1,7 @@
 import React from "react";
 
-const Card = (props) => {
-  console.log(props.username);
+const Card = ({ username }) => {
+  console.log(username);
   return (
     <div>
       <div className="relative h-[400px] w-[300px] rounded-md">
