@@ -6,8 +6,10 @@ import "./App.css";
 function App() {
   let [counter, setCounter] = useState(0);
 
-  // let counter = 12;
+  // let counter = 12
 
+
+  /*
   const addValue = () => {
     // counter = counter + 1;
     if (counter < 20) {
@@ -20,6 +22,16 @@ function App() {
       setCounter(counter - 1);
     }
   };
+  */
+
+  const addValue =()=>{
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+  }
+
+
   return (
     <>
       <h1>Chai aur react</h1>
@@ -27,7 +39,7 @@ function App() {
 
       <button onClick={addValue}>Add value</button>
       <br />
-      <button onClick={removeValue}>Remove value</button>
+      {/* <button onClick={removeValue}>Remove value</button> */}
     </>
   );
 }
