@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 
 function App() {
   const [length, setLength] = useState(8);
@@ -10,7 +10,7 @@ function App() {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     if (numberAllowed) str += "0123456789";
-    if (charAllowed) str += "`~!@#$%^&*()-_=+[{]}|;:',";
+    if (charAllowed) str += "!@#$%^&*{}[]()_-+=~";
 
     for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1);
@@ -20,7 +20,9 @@ function App() {
     setPassword(pass);
   }, [length, numberAllowed, charAllowed, setPassword]);
 
-  useEffect(()=>{passwordGenerator()}, [length, numberAllowed, charAllowed, passwordGenerator])
+  useEffect(() => {
+    passwordGenerator();
+  }, [length, numberAllowed, charAllowed, passwordGenerator]);
 
   return (
     <>
@@ -69,7 +71,7 @@ function App() {
               defaultChecked={charAllowed}
               id="characterInput"
               onChange={() => {
-                setNumberAllowed((prev) => !prev);
+                setCharAllowed((prev) => !prev);
               }}
             />
             <label htmlFor="numberInput">Characters</label>
