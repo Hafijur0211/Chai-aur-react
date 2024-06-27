@@ -4,6 +4,8 @@ import UserContext from "../context/UserContext";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const {setUser} = useContext(UserContext)
   const handleSubmit = () => {};
   return (
     <div>
