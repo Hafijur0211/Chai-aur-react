@@ -5,8 +5,10 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const {setUser} = useContext(UserContext)
-  const handleSubmit = () => {};
+  const { setUser } = useContext(UserContext);
+  const handleSubmit = () => {
+    setUser({ username, password });
+  };
   return (
     <div>
       <h2>Login</h2>
