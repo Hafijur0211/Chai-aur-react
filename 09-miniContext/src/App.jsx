@@ -1,14 +1,12 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import UserContextProvider from "./context/UserContextProvider";
 
-function App() { 
-
-  return (
-    <> 
-    <h1>Hafijur</h1>
-    </>
-  )
+function App() {
+  return ( 
+    <UserContextProvider>
+      <h1>Hafijur</h1>
+    </UserContextProvider>
+  );
 }
 
-export default App
+export default App;
